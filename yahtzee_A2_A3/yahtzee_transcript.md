@@ -1,5 +1,5 @@
 
-### Person
+### You
 - What is Yahtzee?
 
 ### ChatGPT
@@ -17,7 +17,7 @@ The scoring categories in Yahtzee have varying point values and requirements, in
 
 The winner is the player with the highest total score at the end of the game. Yahtzee is popular due to its mix of luck and strategy, as well as its suitability for players of a wide range of ages. It's easy to learn, making it a favorite for family game nights and casual gaming sessions.
 
-### Person
+### You
 - can you play the game with me?
 
 ### ChatGPT
@@ -32,7 +32,7 @@ Let's start! Here's your first roll:
 
 Let me know which dice you'd like to keep and which you'd like to re-roll (e.g., "keep all," "re-roll 2 and 5," or "keep 4s"). If you're aiming for a particular combination, feel free to share your strategy, and I can provide advice!
 
-### Person
+### You
 - keep 4s and reroll the rest
 
 ### ChatGPT
@@ -42,7 +42,7 @@ Let me know which dice you'd like to keep and which you'd like to re-roll (e.g.,
 
 Now, you have one more roll left for this turn, unless you decide to stop and score with what you have. Would you like to keep any more dice and re-roll the rest, or would you like to score this turn? If you're aiming for a particular combination, let me know!
 
-### Person
+### You
 - keep 1, 3 and one 4 and roll the rest
 
 ### ChatGPT
@@ -54,7 +54,7 @@ Your final roll for this turn is 4, 1, 3, 5, and 2. It looks like you've got a s
 
 Would you like to score this as a Small Straight (30 points), or do you have another category in mind for this turn?
 
-### Person
+### You
 - I'll go with the small straight, your turn now
 
 ### ChatGPT
@@ -69,7 +69,7 @@ All other categories are still open. Ready for your next roll? Here we go:
 
 Let me know which dice you'd like to keep for your next roll, or if there's a specific strategy you have in mind!
 
-### Person
+### You
 - you have to play against me, just keep the score for both of us, now go on and decide your moves for this roll
 
 ### ChatGPT
@@ -94,7 +94,7 @@ Your turn! Let's see what you roll:
 
 What would you like to do?
 
-### Person
+### You
 - reroll 4 and keep the rest
 
 ### ChatGPT
@@ -104,7 +104,7 @@ What would you like to do?
 
 Now, you have two pairs and an opportunity for one more roll. You can try for the Full House again by re-rolling the 3, or you might have another strategy in mind. What's your decision?
 
-### Person
+### You
 - try for full house again
 
 ### ChatGPT
@@ -134,7 +134,7 @@ My current score:
 
 Your turn! Ready for your next roll?
 
-### Person
+### You
 - yes
 
 ### ChatGPT
@@ -144,7 +144,7 @@ Your turn! Ready for your next roll?
 
 What’s your strategy this time?
 
-### Person
+### You
 - keep one of 1, one of 3 and 4, reroll the rest
 
 ### ChatGPT
@@ -154,7 +154,7 @@ What’s your strategy this time?
 
 That's an excellent roll towards a Large Straight! You're just one number away from it. Do you want to keep the 5 and 6 and re-roll one of the others to aim for the 2, or do you have a different strategy for your final roll?
 
-### Person
+### You
 - reroll 1 and keep the rest
 
 ### ChatGPT
@@ -186,7 +186,7 @@ My current score:
 
 Your move! Let me know if you’re ready for the next roll.
 
-### Person
+### You
 - alright next roll
 
 ### ChatGPT
@@ -196,7 +196,7 @@ Your move! Let me know if you’re ready for the next roll.
 
 This roll gives you a great start for either a Full House (which you've already scored) or aiming for a Three-of-a-Kind, Four-of-a-Kind, or even a Yahtzee with the 2s. What would you like to do?
 
-### Person
+### You
 - keep both sixes and reroll the rest
 
 ### ChatGPT
@@ -206,7 +206,7 @@ This roll gives you a great start for either a Full House (which you've already 
 
 It looks like you're on the path to a Straight, but with the first roll focused on the 6s, it's a bit of a pivot. You have one more roll. Would you like to aim for a specific combination with your final roll?
 
-### Person
+### You
 - keep the sixes and reroll rest of them
 
 ### ChatGPT
@@ -216,7 +216,7 @@ It looks like you're on the path to a Straight, but with the first roll focused 
 
 Your final combination is two 6s, two 1s, and a 3. It seems we've moved away from a straight or a full house opportunity. Given this outcome, you might consider placing this roll in the "Chance" category, or potentially scoring it under "Sixes" to maximize those points. What would you like to do?
 
-### Person
+### You
 - use chance
 
 ### ChatGPT
@@ -247,7 +247,7 @@ I ended up with three 1s and didn't improve to a Full House. For this round, I'l
 
 It's not a strong score, but it fits the best with what I've rolled. Your turn! Ready for the next roll?
 
-### Person
+### You
 - what are the scores?
 
 ### ChatGPT
@@ -267,7 +267,7 @@ It's not a strong score, but it fits the best with what I've rolled. Your turn! 
 
 Your strategy is paying off with a strong lead. Ready to roll again?
 
-### Person
+### You
 - let's play 2 more rounds and finish the game
 
 ### ChatGPT
@@ -277,7 +277,7 @@ Your strategy is paying off with a strong lead. Ready to roll again?
 
 A promising start! You’ve got pairs of 4s and 3s, which could lead to a Full House with the right roll, or you might consider another strategy. What would you like to do?
 
-### Person
+### You
 - I already have a full house, keep the fours and reroll rest
 
 ### ChatGPT
@@ -287,7 +287,7 @@ A promising start! You’ve got pairs of 4s and 3s, which could lead to a Full H
 
 Your current set is a bit scattered, but there's still potential. You have one more roll. Would you like to keep any of these or re-roll some?
 
-### Person
+### You
 - keep fours and reroll rest
 
 ### ChatGPT
@@ -311,7 +311,7 @@ Now, for your final round. Let's make it count!
 
 What's your strategy for this roll?
 
-### Person
+### You
 - keep the sixes and reroll the ones
 
 ### ChatGPT
@@ -321,7 +321,7 @@ What's your strategy for this roll?
 
 This roll gives you a sequence but not quite the straight you might have hoped for with this strategy. With one roll left, how would you like to proceed?
 
-### Person
+### You
 - keep sixes and reroll rest
 
 ### ChatGPT
@@ -363,7 +363,7 @@ Now, let’s tally the final scores:
 
 You've played a great game with a strong strategy, leading to a victorious total of 140 points against my 118. Congratulations, and thanks for playing! Would you like to discuss the game or explore anything else?
 
-### Person
+### You
 - I am thinking about how I should approach writing the code for a Yahtzee scorer, do you have any suggestions? Don't give me any code, just the steps and approach
 
 ### ChatGPT
@@ -413,7 +413,7 @@ After getting the basic functionality working, look for ways to refine and optim
 
 By breaking down the project into these manageable steps and focusing on one part at a time, you can systematically build a Yahtzee scorer that is efficient, user-friendly, and robust.
 
-### Person
+### You
 - alright what would be the functional decomposition for this program?
 
 ### ChatGPT
@@ -474,7 +474,7 @@ These might include functions for:
 
 By breaking down the program into these functions, you can focus on implementing one small part at a time, making the development process more manageable and the program easier to debug and maintain.
 
-### Person
+### You
 - aren't there way too many scoring functions? Is there an alternative?
 
 ### ChatGPT

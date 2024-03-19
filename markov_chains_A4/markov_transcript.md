@@ -1,5 +1,5 @@
 
-### Person
+### You
 - What are Markov Chains?
 
 ### ChatGPT
@@ -15,7 +15,7 @@ To formally describe a discrete-time Markov Chain, you typically use:
 
 An example of a simple Markov process could be a board game where players move based on dice rolls. The board positions are the states, and the dice roll outcomes determine the transition probabilities between those states. The game's rules on how to move from one position to another based on the dice roll mirror the memoryless nature of Markov Chains, where each move depends only on the current position (state) and not on how the player arrived there.
 
-### Person
+### You
 - can you write a python function generate(text: str, start_words: list[str], chain_length: int, num_generated: int) -> str  that returns a sentence num_generated words long which sounds similar to the text contained in filename using the concept? The list of start words which has to be exactly as long as the chain_length
 
 ### ChatGPT
@@ -75,7 +75,7 @@ This script first builds a Markov chain model from the input text, using the spe
 
 Keep in mind that this implementation assumes `text` is a simple whitespace-separated string without consideration for punctuation or sentence boundaries, and the `start_words` list must be exactly as long as `chain_length`. The quality and coherence of the generated text heavily depend on the input text's size and diversity.
 
-### Person
+### You
 - could you explain the code?
 
 ### ChatGPT
@@ -103,7 +103,7 @@ This function uses the Markov chain model to generate text that starts with a gi
 
 The overall mechanism involves creating a probabilistic model that represents how likely certain sequences of words are to be followed by other words, based on the input text. The generation process then uses this model, starting from an initial sequence of words, to produce text that statistically resembles the style and content of the original input, at least within the limited context of the chain length used.
 
-### Person
+### You
 - alright, now instead of doing all the work in build_markov_chain, could you split it into smaller functions?
 
 ### ChatGPT
@@ -182,7 +182,7 @@ print(generate(text, start_words, chain_length, num_generated))
 
 This refactoring makes each part of the Markov chain building process clear and focused, which helps in understanding the code, debugging, and potentially extending the functionality (e.g., filtering words, handling punctuation, etc.).
 
-### Person
+### You
 - could you give me some testcases to test the code?
 
 ### ChatGPT
@@ -246,7 +246,7 @@ This refactoring makes each part of the Markov chain building process clear and 
 
 You can run these test cases by modifying the input parameters in the example usage section of the code. These tests will help you explore the code's behavior under various conditions and ensure it works as expected across different scenarios.
 
-### Person
+### You
 - give me the testcases as python code so I can implement them directly
 
 ### ChatGPT
@@ -312,5 +312,5 @@ print(generate(text5, start_words5, chain_length5, num_generated5))
 
 These test cases will help you validate the correctness and robustness of your Markov chain text generation implementation. You can run each block separately and observe the output to verify if it matches the expected behavior described earlier. Remember, due to the probabilistic nature of Markov chains and the randomness in word selection, the exact output might vary between runs.
 
-### Person
+### You
 - In the second test case, the generated output is just "two four" why is that?
