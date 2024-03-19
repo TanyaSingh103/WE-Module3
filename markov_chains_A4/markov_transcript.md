@@ -314,3 +314,19 @@ These test cases will help you validate the correctness and robustness of your M
 
 ### You
 - In the second test case, the generated output is just "two four" why is that?
+
+### ChatGPT
+- If the generated output is just "two four" for the second test case, it indicates that the program couldn't find a valid continuation for the provided start words "two" and "four" within the Markov chain model it built from the input text. This situation arises because "two" and "four" do not occur consecutively in the input text "one two three, three four five", and therefore, there's no direct transition recorded in the Markov chain that starts from the state ("two", "four").
+
+When the `generate` function looks up the next possible states after "two four", it finds no entries in the Markov chain for this state (since it was never encountered during the Markov chain construction). As a result, the loop that appends new words to the generated text does not execute any further additions because it immediately hits the break condition due to the absence of valid next word choices.
+
+This is a fundamental aspect of Markov chain-based text generation: the output is highly dependent on the input text and the specific sequences of words that have been observed. If the start words or any intermediate state formed during text generation do not have a following word observed in the input text, the generation process cannot proceed beyond that point.
+### Solutions and Workarounds 
+1. **Broaden the Input Text** : Ensure the input text is sufficiently diverse and large to include a wide range of word sequences. This increases the likelihood of having valid transitions for more starting states. 
+2. **Handle Unseen States Gracefully** : Modify the generation code to handle cases where an unseen state is encountered. For instance, you could:
+- Randomly jump to a new state that is present in the Markov chain.
+- Restart the generation with different start words.
+- Provide a default behavior or output message indicating that the generation cannot proceed as intended. 
+3. **Preprocessing and Data Cleaning** : Sometimes, preprocessing the text to normalize word forms, remove punctuation, or handle numbers and special characters can result in a more cohesive and connected Markov chain, reducing the likelihood of encountering dead-end states.
+
+The specific choice of solution depends on your application's requirements and the nature of the input texts you expect to handle.
