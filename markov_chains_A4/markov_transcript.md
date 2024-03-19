@@ -1,8 +1,8 @@
 
-Person: 
+### Person
 - What are Markov Chains?
 
-ChatGPT: 
+### ChatGPT
 - Markov Chains are mathematical systems that undergo transitions from one state to another within a finite or countable number of possible states. They are a type of stochastic process, which means they involve a sequence of random steps. The defining characteristic of Markov Chains is that the probability of transitioning to any future state depends only on the current state and not on the sequence of events that preceded it. This property is known as the Markov property or memorylessness.
 
 Markov Chains can be classified into discrete-time and continuous-time chains, depending on whether the steps occur at fixed time intervals or at any continuous time point, respectively.
@@ -15,10 +15,10 @@ To formally describe a discrete-time Markov Chain, you typically use:
 
 An example of a simple Markov process could be a board game where players move based on dice rolls. The board positions are the states, and the dice roll outcomes determine the transition probabilities between those states. The game's rules on how to move from one position to another based on the dice roll mirror the memoryless nature of Markov Chains, where each move depends only on the current position (state) and not on how the player arrived there.
 
-Person: 
+### Person
 - can you write a python function generate(text: str, start_words: list[str], chain_length: int, num_generated: int) -> str  that returns a sentence num_generated words long which sounds similar to the text contained in filename using the concept? The list of start words which has to be exactly as long as the chain_length
 
-ChatGPT: 
+### ChatGPT
 - Certainly! To accomplish this, we'll first need to parse the input text to create a Markov chain model and then use this model along with the specified start words to generate text. Since the requirement is to use a list of start words as long as the chain length, it suggests using an n-gram model (where "n" is the chain length). However, it's important to clarify that typically, a Markov chain uses the current state (or the current n-1 states in an n-gram model) to predict the next state, rather than using a fixed list of start states to generate a fixed length of output. Nonetheless, for the purpose of this exercise, I'll demonstrate how to implement a function closely aligned with your specifications, bearing in mind that the interpretation of "chain length" here is somewhat unique and relates to how we seed the generation process.
 
 ```python
@@ -75,10 +75,10 @@ This script first builds a Markov chain model from the input text, using the spe
 
 Keep in mind that this implementation assumes `text` is a simple whitespace-separated string without consideration for punctuation or sentence boundaries, and the `start_words` list must be exactly as long as `chain_length`. The quality and coherence of the generated text heavily depend on the input text's size and diversity.
 
-Person: 
+### Person
 - could you explain the code?
 
-ChatGPT: 
+### ChatGPT
 - Certainly! The code provided above illustrates how to generate text that mimics the style of a given input text using the concept of Markov chains, specifically utilizing an n-gram model approach. Let's break down the code into its components for a clearer understanding.
 ### The `build_markov_chain` Function
 
@@ -103,10 +103,10 @@ This function uses the Markov chain model to generate text that starts with a gi
 
 The overall mechanism involves creating a probabilistic model that represents how likely certain sequences of words are to be followed by other words, based on the input text. The generation process then uses this model, starting from an initial sequence of words, to produce text that statistically resembles the style and content of the original input, at least within the limited context of the chain length used.
 
-Person: 
+### Person
 - alright, now instead of doing all the work in build_markov_chain, could you split it into smaller functions?
 
-ChatGPT: 
+### ChatGPT
 - Splitting the work done in `build_markov_chain` into smaller, more focused functions can enhance readability and maintainability. We'll divide the process into functions for: 
 1. **Splitting the text into words** 
 2. **Building state transitions** 
@@ -182,10 +182,10 @@ print(generate(text, start_words, chain_length, num_generated))
 
 This refactoring makes each part of the Markov chain building process clear and focused, which helps in understanding the code, debugging, and potentially extending the functionality (e.g., filtering words, handling punctuation, etc.).
 
-Person: 
+### Person
 - could you give me some testcases to test the code?
 
-ChatGPT: 
+### ChatGPT
 - Sure, I'll provide you with a few test cases that you can use to test the functionality and robustness of the Markov chain text generation code. These test cases will range from simple to more complex scenarios, and they will help ensure that the code handles different types of input correctly.
 ### Test Case 1: Simple Repetitive Text
 
@@ -246,10 +246,10 @@ ChatGPT:
 
 You can run these test cases by modifying the input parameters in the example usage section of the code. These tests will help you explore the code's behavior under various conditions and ensure it works as expected across different scenarios.
 
-Person: 
+### Person
 - give me the testcases as python code so I can implement them directly
 
-ChatGPT: 
+### ChatGPT
 - Certainly! Below are the test cases framed as Python code snippets, designed for direct implementation and testing with the `generate` function from the previously discussed Markov chain text generation program.
 ### Test Case 1: Simple Repetitive Text
 
@@ -312,5 +312,5 @@ print(generate(text5, start_words5, chain_length5, num_generated5))
 
 These test cases will help you validate the correctness and robustness of your Markov chain text generation implementation. You can run each block separately and observe the output to verify if it matches the expected behavior described earlier. Remember, due to the probabilistic nature of Markov chains and the randomness in word selection, the exact output might vary between runs.
 
-Person: 
+### Person
 - In the second test case, the generated output is just "two four" why is that?

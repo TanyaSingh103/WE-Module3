@@ -1,8 +1,8 @@
 
-Person: 
+### Person
 - I want to write a python program for a scorer for the Yahtzee game, what functions should I have in the program?
 
-ChatGPT: 
+### ChatGPT
 - Designing a scorer for the Yahtzee game in Python involves creating functions that can evaluate a player's dice roll according to the Yahtzee scoring rules. Here's a breakdown of functions you might consider for your program:
 ### 1. `calculate_score(dice, category)`
 
@@ -47,10 +47,10 @@ Your main program would likely prompt the user to enter the dice and select a ca
 
 Remember, Yahtzee allows for multiple rolls with the option to re-roll some of the dice on the second and third rolls. Depending on how complex you want your scorer to be, you might also implement functionality to simulate or manage these aspects of the game.
 
-Person: 
+### Person
 - I want it to be able to account for upto 3 rerolls
 
-ChatGPT: 
+### ChatGPT
 - To accommodate up to 3 re-rolls as part of the Yahtzee game scorer, you can design your program to allow players to select which dice they wish to keep and which they want to re-roll after each roll. Here’s how you can structure your program to include this functionality:
 ### 1. Main Program Loop
 
@@ -114,10 +114,10 @@ Consider adding features like:
 
 This basic framework and suggestions should help you get started with a Yahtzee game scorer that includes up to 3 re-rolls. As you build and test your program, you may find additional features and refinements to include.
 
-Person: 
+### Person
 - also write a function score(dice: list[int]) -> dict[str, int] which returns a dictionary containing what the yahtzee hand represented by the list dice would score in each yahtzee category
 
-ChatGPT: 
+### ChatGPT
 - To create a function `score(dice: list[int]) -> dict[str, int]` that returns a dictionary with scores for each Yahtzee category based on the dice list provided, we need to implement each scoring rule within its function and then aggregate these into a single function that calls all others and organizes the results into a dictionary.
 
 Here's a sample implementation that includes scoring functions for several key categories in Yahtzee. Note that this is a simplified version, and you might want to refine or extend it based on all the Yahtzee rules and scoring nuances.
@@ -207,10 +207,10 @@ for category, score in scores.items():
 
 This function `score` takes a list of dice as an input and returns a dictionary with the scores for each category as they would apply to that list. This implementation assumes that all dice have been rolled and the best score for each category is being calculated. Adjustments may be needed based on specific game rules or variations you wish to implement.
 
-Person: 
+### Person
 - alright, now write complete code for the program
 
-ChatGPT: 
+### ChatGPT
 - Let's create a complete Python program for a Yahtzee scorer, including the scoring for each category, handling up to 3 re-rolls, and providing a final score breakdown for the roll. This program will be a simplified version focusing on the scoring aspects and the re-roll mechanism.
 
 ```python
@@ -316,12 +316,12 @@ if __name__ == "__main__":
 
 This program allows the player to roll five dice, choose which ones to re-roll up to three times, and then calculates and displays the scores for each Yahtzee category based on the final dice configuration. It's a basic simulation of a single turn in Yahtzee, focusing on the scoring aspects. You can extend this by adding features like multiple players, tracking scores across rounds, or implementing a complete game loop.
 
-Person: 
+### Person
 - remove the __name__ conditon
 
 put the code for yahtzee_game in a loop and include a function to keep track of the score
 
-ChatGPT: 
+### ChatGPT
 - To evolve the program into a more complete version of Yahtzee that includes a game loop and tracks scores across multiple rounds, you'll need to adjust the structure to maintain score totals and potentially handle multiple players. For simplicity, I'll show a version for a single player that tracks scores across multiple rounds.
 
 I've removed the `if __name__ == "__main__":` condition as requested and included a loop to simulate multiple turns (rounds) of Yahtzee. Also, I've added a basic scorekeeping mechanism.
@@ -438,13 +438,13 @@ yahtzee_game()
 
 Remember, a full implementation where players choose their scoring category dynamically would require additional logic to handle user choices and validate that each category is scored exactly once per game.
 
-Person: 
+### Person
 - in this program, include a function that allows user to choose a category to add their score to
 
 
 I want to test out this code, what would be a good testing strategy?
 
-ChatGPT: 
+### ChatGPT
 - Testing a program like this Yahtzee game scorer involves several key steps to ensure that all components function correctly individually and together as a whole. Here's a testing strategy that covers various aspects of the program:
 ### 1. Unit Testing
 
@@ -480,10 +480,10 @@ For unit and integration testing, you can use Python's built-in `unittest` frame
 
 By thoroughly testing each component and then the system as a whole, you'll be able to identify and fix issues before they affect end-users, ensuring a smooth and enjoyable game experience.
 
-Person: 
+### Person
 - write 20 test cases for this code
 
-ChatGPT: 
+### ChatGPT
 - Creating comprehensive test cases for the Yahtzee game involves testing individual scoring functions, dice rolling, user input handling for rerolls, score selection, and overall game logic. Here are 20 test cases that cover a range of functionality in the game:
 ### 1. Test Scoring Functions Individually 
 1. **Ones:**  Test `score_ones_through_sixes([1, 2, 1, 4, 5], 1)` expecting `2`. 
