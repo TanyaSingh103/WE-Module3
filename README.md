@@ -5,7 +5,7 @@
 The four letter words were given as a text file from https://gist.github.com/paulcc/3799331
 
 ### Yahtzee
-Used ChatGPT to learn what a game of Yahtzee is and played the game with it. I asked it to come up with an approach of how to write a Yahtzee scorer. Then wrote the code and implemented a testing strategy for the Yahtzee code using ChatGPT.
+Used ChatGPT to learn what a game of Yahtzee is and played the game with it. Asked it to come up with an approach of how to write a Yahtzee scorer. Then wrote the code and implemented a testing strategy for the Yahtzee code using ChatGPT.
 
 ### Markov Chains
-Implemented a Markov chain model for text generation using ChatGPT and tested it.
+Implemented a Markov chain model for text completion using ChatGPT, iterated upon the solution and tested it against different testcases.
