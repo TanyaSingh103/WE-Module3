@@ -11,47 +11,47 @@
 "Explain it like you are explaining it to a five year old", is actually harder than I initially thought. I mean, explaining a card game to a five year old would be pretty difficult, given their fleeting attention span. So thankfully, instead of a five year old, I had to explain the card game to ChatGPT.
 
 \section{Problem Statement}
-My job was to explain to ChatGPT what the game of "Diamonds" is, basically to teach the rules of the game to it and, hopefully manage to get it to write working code that can be understood by a person.
+My job was to explain to ChatGPT what the game of "Diamonds" is, basically to teach the rules of the game to it and, hopefully manage to get it to write working code that can be understood by a person. \newline
 
 The task in a sense, was to to "teach" GenAI something that was not known to it before hand, to get it utilize bits of information from different sources to generate ideas that might be related to other things but are "new" in the given context. 
 
-
 \section{Teaching GenAI the game}
-Initially, I had to restart the chat  when I was explaining the game to ChatGPT initially, my explanation was too vague and sometimes ChatGPT just won't let go of a rule it had misunderstood and would keep repeating the same thing.
+Initially, I had to restart the chat  when I was explaining the game to ChatGPT initially, my explanation was too vague and sometimes ChatGPT just won't let go of a rule it had misunderstood and would keep repeating the same thing. \newline
 
-So I decided to give it an extremely detailed explanation which would cover almost everything I knew about the game.
+So I decided to give it an extremely detailed explanation which would cover almost everything I knew about the game.\newline
 
-I made sure to cover everything from the basic rules to the exception case of a tie and also when the game ends. I tried to explain the game in a sort of currency system where I described the diamonds as an item of value and the other cards as currency. 
+I made sure to cover everything from the basic rules to the exception case of a tie and also when the game ends. I tried to explain the game in a sort of currency system where I described the diamonds as an item of value and the other cards as currency. \newline
 
-Surprisingly, ChatGPT understood everything in the first try this time and gave a pretty good summary of it's understanding about the game play.
+Surprisingly, ChatGPT understood everything in the first try this time and gave a pretty good summary of it's understanding about the game play.\newline
 
-I asked ChatGPT if it could come up with any strategies to which it stated a few things to keep in mind when playing. At this point, ChatGPT gave me very intelligent tactics like Opponent Observation, about how one should read the opponent's bidding patterns, bluffing and even misdirection. Though these ideas are pretty easy for a person to implement, I doubted if an AI could do the same. It even talked about early, mid and end game bidding, which again made me think about the implementation. 
+I asked ChatGPT if it could come up with any strategies to which it stated a few things to keep in mind when playing. At this point, ChatGPT gave me very intelligent tactics like Opponent Observation, about how one should read the opponent's bidding patterns, bluffing and even misdirection. Though these ideas are pretty easy for a person to implement, I doubted if an AI could do the same. It even talked about early, mid and end game bidding, which again made me think about the implementation. \newline
 
-I then asked ChatGPT if it had any questions about the game (not the best order of things, should have asked this before talking about strategies) and it asked me four questions, and I gave the needed clarification. The questions weren't particularly interesting but just general queries to confirm already given information.
+I then asked ChatGPT if it had any questions about the game (not the best order of things, should have asked this before talking about strategies) and it asked me four questions, and I gave the needed clarification. The questions weren't particularly interesting but just general queries to confirm already given information. \newline
 
-I asked ChatGPT to play the game with me where it should keep track of the points and draw random cards for diamonds, while playing against me and that I would tell it my bids.
+I asked ChatGPT to play the game with me where it should keep track of the points and draw random cards for diamonds, while playing against me and that I would tell it my bids. \newline
 
-I won the first two bids and ChatGPT stated the reflections it made from them saying that I made bold bids to secure high-value diamond cards early in the game.(All I was doing was placing one rank more than the diamond card)
+I won the first two bids and ChatGPT stated the reflections it made from them saying that I made bold bids to secure high-value diamond cards early in the game.(All I was doing was placing one rank more than the diamond card) \newline
 
-When I asked GPT what cards it had left, it answered correctly, which seems fine since there had been only two rounds played. For the third round, I just made a bid equal to the rank of the card and ChatGPT called it a "balanced approach" which seemed pretty reasonable but ChatGPT couldn't win a round yet so I asked it to discuss it's strategies it had come up with.
+When I asked GPT what cards it had left, it answered correctly, which seems fine since there had been only two rounds played. For the third round, I just made a bid equal to the rank of the card and ChatGPT called it a "balanced approach" which seemed pretty reasonable but ChatGPT couldn't win a round yet so I asked it to discuss it's strategies it had come up with. \newline
 
 \section{Strategies and Code}
-After playing the game once, ChatGPT added a few things to it's previous answer about strategies. Now, it had included counting cards to keep track of what has been used and what the opponent has used. This idea seemed a bit more implementable by AI. Though it was still thinking along the lines of trying to somehow trick the opponent, I think the focus slightly shifted to what it should be doing too.
+After playing the game once, ChatGPT added a few things to it's previous answer about strategies. Now, it had included counting cards to keep track of what has been used and what the opponent has used. This idea seemed a bit more implementable by AI. Though it was still thinking along the lines of trying to somehow trick the opponent, I think the focus slightly shifted to what it should be doing too. \newline
 
-Then I asked it what approach I should follow if I were to write a python program where the computer plays against the user for a two player game of diamonds. To this, ChatGPT gave me what I think was a reasonable answer where it divided the whole thing into sections and steps as it gave me a basic outline of the code.
+Then I asked it what approach I should follow if I were to write a python program where the computer plays against the user for a two player game of diamonds. To this, ChatGPT gave me what I think was a reasonable answer where it divided the whole thing into sections and steps as it gave me a basic outline of the code. \newline
 
-I had to ask it to tweak the code a bit to remove a few extra operations that didn't seem necessary. It took a few tries to explain why there wasn't a need to sort displayed output since it was already in a sorted state.
+I had to ask it to tweak the code a bit to remove a few extra operations that didn't seem necessary. It took a few tries to explain why there wasn't a need to sort displayed output since it was already in a sorted state. \newline
 
-Although the code was alright for a first time try, I didn't see any of the strategies that ChatGPT initially recommended in the code. It had just applied a simple adaptive bidding strategy. But there was no sign of opponent observation. 
+Although the code was alright for a first time try, I didn't see any of the strategies that ChatGPT initially recommended in the code. It had just applied a simple adaptive bidding strategy. But there was no sign of opponent observation. \newline
 
-I then asked ChatGPT if it could come up with a better strategy, then it went back to opponent behavior and a few ideas it had discussed before, talking about implementation considerations too.
+I then asked ChatGPT if it could come up with a better strategy, then it went back to opponent behavior and a few ideas it had discussed before, talking about implementation considerations too. \newline
 
-I asked if it could implement the strategy in code, to which it generated a computer bid function which used the information of past bids as well as adjusted the bids according to game progress. The computer's bid was made according to the current state of the game rather than just the diamonds card that was drawn. 
+I asked if it could implement the strategy in code, to which it generated a computer bid function which used the information of past bids as well as adjusted the bids according to game progress. The computer's bid was made according to the current state of the game rather than just the diamonds card that was drawn. \newline
 
-In a way, ChatGPT was now looking at the bigger picture.
+In a way, ChatGPT was now looking at the bigger picture. \newline
 
 \section{Analysis and Conclusion}
 There were a few observations I made about the conversation:
+
 \begin{itemize}
     \item ChatGPT grasped new information quickly when given detailed information
     \item ChatGPT struggled with understanding the step where it was sorting already sorted data
@@ -59,7 +59,9 @@ There were a few observations I made about the conversation:
     \item But, after being directed to implement the strategy, it was able to write code accordingly
 \end{itemize}
 
-Now we know that GenAI can learn games, develop strategies, and even generate playable code. But, it tends to struggle with maintaining focus on complex strategies and dealing with abstract concepts.
+When I played against the computer with the final version of code on Google colab while using a similar strategy that I used when playing against ChatGPT, the computer won.\newline
+
+So, now we know that GenAI can learn games, develop strategies, and even generate playable code. But, it tends to struggle with maintaining focus on complex strategies and dealing with abstract concepts. \newline
 \end{document}
 
 
