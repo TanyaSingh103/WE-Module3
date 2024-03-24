@@ -21,17 +21,6 @@ Since I've experienced the trouble of AI repeating the same things over and over
 
 Here's the first prompt I gave ChatGPT to explain the game:
 
-"okay so the game is called "Diamonds" It can be played by two or three players at a time. 
-It is a cards game where the diamond cards are considered as an item of value and all the non-diamond cards are considered as currency. 
-The value of each card corresponds to it's rank(2<3<4<5<6<7<8<9<T<J<Q<K<A). 
-The players get a set of spades/clubs/hearts each (13 cards for each player) and the diamond cards are shuffled and placed face down. 
-A card from the diamond pile is taken out. Each player takes a currency card from the set they have and places it as a bid. 
-The players don't reveal their bids to each other until everyone has made one. When the bids are revealed, the one with higher bid gets the diamonds and bid cards are discarded. 
-The person with highest bid gets points equivalent to the rank of the diamonds card. If all players have same bid, the points are divided into equal parts among them. 
-If it is a three player game and two players get the same higher bid, they divide it equally and the third player doesn't get anything. 
-The game goes on till all diamond cards are exhausted and the player with highest number of points wins.
-"
-
 I made sure to cover everything from the basic rules to the exception case of a tie and also when the game ends. I tried to explain the game in a sort of currency system where I described the diamonds as an item of value and the other cards as currency.
 
 Surprisingly, ChatGPT understood everything in the first try and gave a pretty good summary of it's understanding about the game play.
@@ -39,6 +28,16 @@ Surprisingly, ChatGPT understood everything in the first try and gave a pretty g
 I asked ChatGPT if it could come up with any strategies to which it stated a few things to keep in mind when playing. At this point, ChatGPT gave me very intelligent tactics like Opponent Observation, about how one should read the opponent's bidding patterns, bluffing and even misdirection. Though these ideas are pretty easy for a person to implement, I doubted if an AI could do the same. It even talked about early, mid and end game bidding, which again made me think about the implementation. 
 
 I then asked ChatGPT if it had any questions about the game (not the best order of things, should have asked this before talking about strategies) and it asked me four questions, and I gave the needed clarification. The questions weren't particularly interesting but just general queries to confirm already given information.
+
+I asked ChatGPT to play the game with me where it should keep track of the points and draw random cards for diamonds, while playing against me and that I would tell it my bids.
+
+I won the first two bids and ChatGPT stated the reflections it made from them saying that I made bold bids to secure high-value diamond cards early in the game.(All I was doing was placing one rank more than the diamond card)
+
+When I asked GPT what cards it had left, it answered correctly, which seems fine since there had been only two rounds played. For the third round, I just made a bid equal to the rank of the card and ChatGPT called it a "balanced approach" which seemed pretty reasonable but ChatGPT couldn't win a round yet so I asked it to discuss it's strategies it had come up with.
+
+\section{Strategies and Code}
+After playing the game once, ChatGPT added a few things to it's previous answer about strategies. Now, it had included counting cards to keep track of what has been used and what the opponent has used. This idea seemed a bit more implementable by AI. Though it was still thinking along the lines of trying to somehow trick the opponent, I think the focus slightly shifted to what it should be doing too.
+
 \end{document} 
 
 
