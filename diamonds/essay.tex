@@ -38,6 +38,18 @@ When I asked GPT what cards it had left, it answered correctly, which seems fine
 \section{Strategies and Code}
 After playing the game once, ChatGPT added a few things to it's previous answer about strategies. Now, it had included counting cards to keep track of what has been used and what the opponent has used. This idea seemed a bit more implementable by AI. Though it was still thinking along the lines of trying to somehow trick the opponent, I think the focus slightly shifted to what it should be doing too.
 
+Then I asked it what approach I should follow if I were to write a python program where the computer plays against the user for a two player game of diamonds. To this, ChatGPT gave me what I think was a reasonable answer where it divided the whole thing into sections and steps as it gave me a basic outline of the code.
+
+I had to ask it to tweak the code a bit to remove a few extra operations that didn't seem necessary. It took a few tries to explain why there wasn't a need to sort displayed output since it was already in a sorted state.
+
+Although the code was alright for a first time try, I didn't see any of the strategies that ChatGPT initially recommended in the code. It had just applied a simple adaptive bidding strategy. But there was no sign of opponent observation. 
+
+I then asked ChatGPT if it could come up with a better strategy, then it went back to opponent behavior and a few ideas it had discussed before, talking about implementation considerations too.
+
+I asked if it could implement the strategy in code, to which it generated a computer bid function which used the information of past bids as well as adjusted the bids according to game progress. The computer's bid was made according to the current state of the game rather than just the diamonds card that was drawn. 
+
+In a way, ChatGPT was now looking at the bigger picture.
+
 \end{document} 
 
 
