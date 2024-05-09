@@ -1,0 +1,97 @@
+\documentclass{article}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\title{Designing a Pokemon Database with SQL vs. NoSQL using ChatGPT}
+\author{Tanya Singh}
+\date{May 2024}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+This report explores your experience designing a Pokemon database using both SQL and NoSQL with the assistance of ChatGPT. It compares the approaches in terms of ease of use, flexibility, and ChatGPT's helpfulness in each scenario.
+
+\section{Designing with SQL Server}
+ChatGPT provided a well-structured approach to designing the database using SQL Server.
+\subsection{Tables}
+\begin{itemize}
+    \item Pokemon ( PokemonID (Primary Key), Name, PrimaryType, SecondaryType (nullable))
+    \item Type ( TypeID (Primary Key), TypeName)
+    \item Move ( MoveID (Primary Key), Name, Type (Foreign Key referencing TypeID), Power)
+    \item PokemonMoves (PokemonID (Foreign Key referencing PokemonID), MoveID (Foreign Key referencing MoveID))
+\end{itemize}
+\subsection{Observations}
+\begin{itemize}
+    \item ChatGPT effectively explained the purpose of each table and its role in representing Pokemon data.
+    \item The use of a separate PokemonMoves table to handle the many-to-many relationship between Pokemon and Moves was well explained.
+    \item ChatGPT provided necessary constraint from the description itself and assigned primary and foreign keys.
+    \item Although when firstly asked about steps to design a database, ChatGPT did talk about Normalization, but during the design process, ChatGPT did not mention it
+\end{itemize}
+
+\section{Designing with NoSQL (MongoDB)}
+ChatGPT also offered a well-defined approach to using MongoDB for the Pokemon database:
+\subsection{Collections and Document structures}
+\begin{itemize}
+    \item Pokemon: \{ ``\_id": ObjectId(), ``Name": ``Bulbasaur", ``Types": [``Grass"], ``Moves": [``Tackle", ``Vine Whip", ``Return"] \}
+    \item Move: \{ ``\_id": ObjectId(), ``Name": ``Tackle", ``Type": ``Normal", ``Power": 35 \}
+    \item Type: \{ ``\_id": ObjectId(), ``Name": ``Grass", ``EffectiveAgainst": [``Water"], ``WeakAgainst": [``Fire", ``Flying"] \}
+    \item PokemonMoves \{``\_id": ObjectId(),
+    ``PokemonID": "\le Reference to Pokémon Document \ge",
+    ``MoveID": "\le Reference to Move Document \ge"\}
+
+\end{itemize}
+\subsection{Observations}
+\begin{itemize}
+    \item ChatGPT explained the concept of collections and documents, highlighting the flexible schema in NoSQL
+    \item It gave both embedding moves within Pokemon documents and using references as options for many-to-many relationships.
+    \item ChatGPT did not discuss the potential drawbacks of embedded documents, such as data duplication if a move is learned by multiple Pokemon.
+\end{itemize}
+
+
+\section{Analysis}
+\begin{itemize}
+
+\item \textbf{Easy to use:}
+\begin{itemize}
+    \item SQL Server offered a structured approach with clear steps and familiar table concepts.
+    \item NoSQL provides more flexibility in schema design but might require more upfront planning for complex relationships.
+\end{itemize}
+
+\item \textbf{Flexibility:}
+\begin{itemize}
+    \item SQL Server uses a schema, which can be good for fixed data models but isn't flexible for evolving ones.
+    \item NoSQL's flexible schema allows for easier adaptation to changing data structures.
+\end{itemize}
+
+\item \textbf{Instructing ChatGPT:}
+\begin{itemize}
+    \item It is better to give ChatGPT the complete database description when asking it to design
+    \item When provided information about the database in steps or pieces, ChatGPT makes more mistakes
+\end{itemize}
+
+\end{itemize}
+
+\section{Conclusion}
+\subsection{Areas for Improvement}
+\begin{itemize}
+    \item \textbf{NoSQL considerations}: While ChatGPT effectively explained NoSQL concepts, it could be improved by providing more in-depth guidance on optimizing schema design and query performance in MongoDB
+
+    \item \textbf{Normalization}: ChatGPT just briefly mentioned Normalization without showing the actual implementation, this could be improved.
+\end{itemize}
+\subsection{Learnings}
+\begin{itemize}
+    
+\item \textbf{Data Structure Stability:} If the data structure is likely to change frequently, NoSQL might be more suitable.
+
+\item \textbf{Data Integrity Requirements: } If data integrity and adherence to a fixed schema are critical, SQL might be a better choice.
+
+\item \textbf{Query Complexity: } Query performance in NoSQL can depend on factors like document structure and indexing strategies. So, SQL offers better performance for complex queries requiring joins or aggregations.
+
+\item \textbf{Potential Drawbacks: } There are challenges associated with each approach, such as scalability concerns in SQL or data consistency issues in NoSQL.
+
+\end{itemize}
+\nextline \nextline
+This experience highlights the strengths and weaknesses of both SQL and NoSQL approaches and how ChatGPT works with them. Though both of them work well for this database, a complete database design might involve additional considerations beyond the scope of this exploration.
+\end{document}
+
