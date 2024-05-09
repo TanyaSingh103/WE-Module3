@@ -1,6 +1,7 @@
 \documentclass{article}
 \usepackage{hyperref}
 \usepackage{xcolor}
+\usepackage[T1]{fontenc}
 \title{Designing a Pokemon Database with SQL vs. NoSQL using ChatGPT}
 \author{Tanya Singh}
 \date{May 2024}
@@ -37,8 +38,8 @@ ChatGPT also offered a well-defined approach to using MongoDB for the Pokemon da
     \item Move: \{ ``\_id": ObjectId(), ``Name": ``Tackle", ``Type": ``Normal", ``Power": 35 \}
     \item Type: \{ ``\_id": ObjectId(), ``Name": ``Grass", ``EffectiveAgainst": [``Water"], ``WeakAgainst": [``Fire", ``Flying"] \}
     \item PokemonMoves \{``\_id": ObjectId(),
-    ``PokemonID": "\le Reference to Pokémon Document \ge",
-    ``MoveID": "\le Reference to Move Document \ge"\}
+    ``PokemonID": `` \textless Reference to Pokémon Document\textgreater ",
+    ``MoveID": `` \textless Reference to Move Document\textgreater"\}
 
 \end{itemize}
 \subsection{Observations}
